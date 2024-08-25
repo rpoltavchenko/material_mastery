@@ -1,0 +1,16 @@
+version: '3.8'
+services:
+  web:
+    build: .
+    ports:
+      - "5001:5000"
+    environment:
+      - DATABASE_URL=postgresql://username:password@db/material_mastery_db
+  db:
+    image: postgres
+    environment:
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: material_mastery_db
+    ports:
+      - "5432:5432"

@@ -1,0 +1,1 @@
+CREATE DATABASE material_mastery_db;
